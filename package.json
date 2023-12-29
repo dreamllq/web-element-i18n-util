@@ -12,8 +12,7 @@
     }
   },
   "files": [
-    "/dist",
-    "/docs/.vitepress/dist"
+    "/dist"
   ],
   "types": "dist/index.d.ts",
   "scripts": {
