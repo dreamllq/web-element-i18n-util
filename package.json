@@ -1,6 +1,6 @@
 {
-  "name": "vite-vue3-ts-component-template",
-  "description": "模板",
+  "name": "lc-element-i18n-util",
+  "description": "基于element-plus的组件开发国际化工具",
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/index.umd.cjs",
@@ -20,12 +20,14 @@
     "dev": "npm run docs:dev",
     "build": "vite build && vue-tsc -p tsconfig-build.json && tsc-alias -p tsconfig-build.json",
     "preview": "vite preview",
-    "postversion": "git push && git push --tags && npm run docs:build && npm run build && npm publish --registry=https://registry.npmjs.org/",
+    "postversion": "git push && git push --tags",
     "test": "jest",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "publish:next": "npm run docs:build && npm run build && npm publish --registry=https://registry.npmjs.org/ --tag=next",
+    "publish:beta": "npm run docs:build && npm run build && npm publish --registry=https://registry.npmjs.org/ --tag=beta"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
@@ -74,10 +76,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/dreamllq/web-element-i18n-util.git"
   },
   "keywords": [
     "vue",
-    "vue3"
+    "vue3",
+    "component",
+    "i18n",
+    "util"
   ]
 }

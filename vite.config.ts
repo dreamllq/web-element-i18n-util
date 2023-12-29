@@ -25,20 +25,14 @@ export default defineConfig({
       external: [
         'vue',
         'lodash',
-        'uuid',
-        'moment',
-        'rxjs',
-        '@vueuse/core'
+        'element-plus'
       ],
       output: {
         // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
         globals: {
           vue: 'Vue',
           uuid: 'uuid',
-          lodash: '_',
-          'moment': 'moment',
-          'rxjs': 'rxjs',
-          '@vueuse/core': '@vueuse/core'
+          'element-plus': 'element-plus'
         },
         exports: 'named'
       }
