@@ -8,7 +8,7 @@ let fallbackLocale: string;
 let locale: string;
 
 export const useProvideLocal = (options: {
-    messages: {[index: string]: {string:string}},
+    messages: {[index: string]: any},
     fallbackLocale?: string,
     locale?: string
   }) => {
