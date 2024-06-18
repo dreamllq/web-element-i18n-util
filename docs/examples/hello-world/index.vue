@@ -6,6 +6,9 @@
     <p>
       {{ t('b.c') }}
     </p>
+    <p>
+      {{ t('d',{abc:'ccc1'}) }}
+    </p>
   </div>
 </template>
 
@@ -19,7 +22,8 @@ useProvideLocal({
     },
     'en': {
       a: 'e111',
-      b: { c: 'e222' }
+      b: { c: 'e222' },
+      d: 'kkk{abc}'
     }
   }
 });
