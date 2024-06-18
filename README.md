@@ -40,3 +40,24 @@ const { t } = useLocale();
 
 </style>
 ```
+
+## 封装组件使用
+
+```ts
+import { useProvideLocal, useLocale } from 'lc-element-i18n-util';
+import zhCn from './zh-cn';
+import en from './en';
+import ja from './ja';
+
+const messages = {
+  'zh-cn': zhCn,
+  en,
+  ja 
+};
+
+export const ct = (...args: [string, any?]) => {
+  useProvideLocal({ messages });
+  const { t } = useLocale();
+  return t(...args);
+};
+```

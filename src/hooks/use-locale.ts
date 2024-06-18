@@ -3,7 +3,7 @@ import { get } from 'lodash';
 
 const defaultLocal = 'zh-cn';
 
-let messages: {[index: string]: {string:string}};
+let messages: {[index: string]: any};
 let fallbackLocale: string;
 let locale: string;
 
